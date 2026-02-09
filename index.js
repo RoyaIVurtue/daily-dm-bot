@@ -38,6 +38,3 @@ client.once("clientReady", () => {
 });
 
 client.login(process.env.TOKEN);
-
-
-
