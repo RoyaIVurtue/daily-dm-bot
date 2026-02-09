@@ -38,4 +38,4 @@ client.once("ready", () => {
   });
 });
 
-client.login(process.env.TOKEN);
+client.login("MTQ3MDE3Njk3NjkxNTUzNDExOQ.GcK0yg.NwfX0gJHkM7ThJ7M5P1sqQ9KlUgs_Pkr1GgQS0");
