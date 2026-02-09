@@ -9,7 +9,6 @@ const client = new Client({
   partials: [Partials.Channel]
 });
 
-// Your daily messages (Sunday → Saturday)
 const messages = [
   "Good morning sweet girl, I hope you have an amazing day! I love you so much!",
   "Good morning beautiful! I love you so so much have a great day ml",
@@ -20,11 +19,9 @@ const messages = [
   "Good morning!! I love uuu its finally the weekendd!"
 ];
 
-// Use the updated event name so the bot stays alive
 client.once("clientReady", () => {
   console.log(`Logged in as ${client.user.tag}`);
 
-  // Runs every day at 11:00 UTC (adjust if needed)
   cron.schedule("0 5 * * *", async () => {
     try {
       const user = await client.users.fetch("1274883986719506539");
@@ -40,7 +37,7 @@ client.once("clientReady", () => {
   });
 });
 
-// IMPORTANT: use environment variable on Railway
 client.login(process.env.TOKEN);
+
 
 
