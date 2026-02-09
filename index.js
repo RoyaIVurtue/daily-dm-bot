@@ -20,9 +20,11 @@ const messages = [
   "Good morning!! I love uuu its finally the weekendd!"
 ];
 
-client.once("ready", () => {
+// Use the updated event name so the bot stays alive
+client.once("clientReady", () => {
   console.log(`Logged in as ${client.user.tag}`);
 
+  // Runs every day at 11:00 UTC (adjust if needed)
   cron.schedule("0 11 * * *", async () => {
     try {
       const user = await client.users.fetch("1274883986719506539");
@@ -38,4 +40,5 @@ client.once("ready", () => {
   });
 });
 
-client.login("MTQ3MDE3Njk3NjkxNTUzNDExOQ.GcK0yg.NwfX0gJHkM7ThJ7M5P1sqQ9KlUgs_Pkr1GgQS0");
+// IMPORTANT: use environment variable on Railway
+client.login(process.env.TOKEN);
