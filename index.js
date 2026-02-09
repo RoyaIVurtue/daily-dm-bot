@@ -25,7 +25,7 @@ client.once("clientReady", () => {
   console.log(`Logged in as ${client.user.tag}`);
 
   // Runs every day at 11:00 UTC (adjust if needed)
-  cron.schedule("0 6 * * *", async () => {
+  cron.schedule("0 5 * * *", async () => {
     try {
       const user = await client.users.fetch("1274883986719506539");
 
@@ -42,4 +42,5 @@ client.once("clientReady", () => {
 
 // IMPORTANT: use environment variable on Railway
 client.login(process.env.TOKEN);
+
 
