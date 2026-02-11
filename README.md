@@ -1,0 +1,1 @@
+If anybody manages to stumble upon this, this is literally just a bot that sends my gf a daily message from me while im in Basic Military Training, feel free to use this if you want! Just copy the code, create a bot and write your own messages, and replace it with your recipients user ID :)
